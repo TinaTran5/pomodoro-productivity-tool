@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/site-icon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="img/site-logo.png" alt="Site Logo">
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="modes">
+            <button id="pomodoro">Pomodoro</button>
+            <button id="short-break">Short Break</button>
+            <button id="long-break">Long Break</button>
+        </div>
+
+        <h1 class="title"></h1>
+        <p class="timer" id="timer">25:00</p>
+
+        <div class="controls">
+            <button id="start-stop">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="task-container">
+        <h3>TASK LIST</h3>
+        <button id="add-task">+ Add Task </button>
+
+        <form id="task-form" style="display: none;">
+            <input type="text" id="task-input" placeholder="Enter a task" required autocomplete="off">
+            <button id="submit" type="submit">Add Task</button>
+        </form>
+
+        <ul id="task-list"></ul>
+    </div>
+
+    <div id="alert-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-modal">&times;</span>
+            <p id="alert-message">Time's up! Time for a break!</p>
+        </div>
+    </div>
+
+    <audio id="button-sound" src="audio/select.wav" preload="auto"></audio>
+    <audio id="finish-sound" src="audio/finished.wav" preload="auto"></audio>
+    <audio id="task-sound" src="audio/taskcompleted.wav" preload="auto"></audio>
+    <script src="index.js"></script>
+</body>
+</html>
