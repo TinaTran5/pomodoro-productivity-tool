@@ -11,11 +11,7 @@ header {
 .logo img {
     width: 200px;
     height: auto;
-    display: flex;
-    justify-content: flex-start;
-
 }
-
 
 .container {
     width: 100%;
@@ -47,7 +43,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     bottom: -10px;
-    width: 50%;
+    width: 30%;
     height: 2px;
     background-color: black;
 }
@@ -61,7 +57,7 @@ header {
 
 #add-task {
     background-color: black;
-    width: 50%;
+    width: 30%;
 }
 
 .title {
@@ -82,14 +78,7 @@ header {
     justify-content: center;
 }
 
-#pomodoro, #short-break, #long-break, #submit, 
-#start-stop, #stop, #reset  {
-    background-color: black;
-    padding: 5px 10px;
-}
-
-
-
+/* Buttons */
 button {
     font-family: "Tiny5", sans-serif;
     font-size: 16px;
@@ -108,17 +97,11 @@ button:hover {
     opacity: 0.7;
 }
 
-.input-wrapper {
-    margin: 10px 0;
+#pomodoro, #short-break, #long-break, #submit, 
+#start-stop, #stop, #reset  {
+    background-color: black;
+    padding: 5px 10px;
 }
-
-input {
-    font-size: 18px;
-    padding: 5px;
-    margin-left: 10px;
-    width: 60px;
-}
-
 
 /* Modal */
 .modal {
@@ -170,25 +153,25 @@ ul#task-list {
     width: 100%;
     padding: 0;
     margin: 0;
-    font-family: "Tiny5", sans-serif;
 }
 
 ul#task-list li {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 30%;
     padding: 10px;
     margin: 10px auto;
-    max-width: 80%;
     background-color: #f0f0f0;
     cursor: pointer;
     border-radius: 5px;
     transition: opacity 0.2s ease-in-out;
+    position: relative;
 }
 
 ul#task-list li span {
-    font-size: 24px;
-    flex-grow: 1;
+    font-size: 18px;
+    margin-right: auto;
 }
 
 /* Completed task style */
@@ -201,7 +184,7 @@ ul#task-list li:hover {
 }
 
 #task-input {
-    width: 30%; 
+    width: 20%; 
     padding: 10px; 
     font-size: 16px; 
     font-family: "Tiny5", sans-serif;
